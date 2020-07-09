@@ -34,7 +34,7 @@ public class RegistrarStepDefinitions {
         SerenityRest.useRelaxedHTTPSValidation("TLS");
         OnStage.setTheStage(new OnlineCast());
         OnStage.theActorCalled("Analista"); //no se hace nada!!!
-        analista = Actor.named("Calva la analista").whoCan(CallAnApi.at(baseUrl));
+        analista = Actor.named("Elvis").whoCan(CallAnApi.at(baseUrl));
 
     }
 
