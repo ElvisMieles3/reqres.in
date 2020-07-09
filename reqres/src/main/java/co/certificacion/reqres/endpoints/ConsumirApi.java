@@ -1,6 +1,8 @@
 package co.certificacion.reqres.endpoints;
 
 import net.serenitybdd.screenplay.Actor;
+import net.serenitybdd.screenplay.rest.interactions.Delete;
+import net.serenitybdd.screenplay.rest.interactions.Get;
 import net.serenitybdd.screenplay.rest.interactions.Post;
 
 
@@ -18,6 +20,21 @@ public class ConsumirApi {
                             .log().all()));
 
         }
+
+    public static void tipoGET(String endPoint, Actor actor) {
+
+        actor.attemptsTo(Get.resource(endPoint)
+                .with(request -> request
+                        .header("Content-Type", "application/json")));
+
+    }
+
+    public static void tipoDeleteId(String endPoint, String id, Actor actor) {
+
+        actor.attemptsTo(Delete.from(endPoint)
+                .with(request -> request
+                        .header("Content-Type", "application/json")));
+    }
 
     }
 

@@ -16,6 +16,8 @@ import net.serenitybdd.screenplay.actors.OnlineCast;
 import net.serenitybdd.screenplay.rest.abilities.CallAnApi;
 
 import net.thucydides.core.util.EnvironmentVariables;
+import org.springframework.expression.spel.ast.Elvis;
+
 import java.util.List;
 import java.util.Map;
 import static net.serenitybdd.screenplay.actors.OnStage.theActorInTheSpotlight;
@@ -59,6 +61,28 @@ public class RegistrarStepDefinitions {
                         response -> response.statusCode(codigo))
         );
     }
+
+
+    @Dado("El analista consulta el servicio de consultar '(.*)'")
+    public void elAnalistaConsultaElServicioDeConsultar(String servicio) {
+        ConsumirApi.tipoGET(ApiEndPoint.obtenerEndPoint(servicio),analista);
+
+    }
+
+    @Cuando("El analista realiza la consulta de '(.*)' cliente con el siguiente Id '(.*)'")
+    public void elAnalistaRealizaLaConsultaDeClienteConElSiguienteId(String servicio, String id) {
+        ConsumirApi.tipoDeleteId(ApiEndPoint.obtenerEndPoint(servicio), id, analista);
+    }
+
+
+    @Entonces("El Analista obtiene como codigo de respuesta '(.*)'")
+    public void elAnalistaObtieneComoCodigoDeRespuesta(int codigo) {
+        analista.should(
+                seeThatResponse("El usuario se registró correctamente",
+                        response -> response.statusCode(codigo))
+        );
+    }
+
 
     @After
     public void cerrarElEscenario() {

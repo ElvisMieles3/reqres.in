@@ -14,3 +14,11 @@ Característica: creacion cliente desde el servicio
     Cuando que el Analista desea consumir el servicio llamado 'register'
     Entonces el deberia ver que la respuesta es un codigo '201'
 
+
+
+  Escenario: El Analista de Calidad verifica que el servicio permita elimimar el cliente
+    Dado El analista consulta el servicio de consultar 'cliente'
+    Cuando El analista realiza la consulta de 'eliminar' cliente con el siguiente Id '2'
+    Entonces El Analista obtiene como codigo de respuesta '204'
+
+

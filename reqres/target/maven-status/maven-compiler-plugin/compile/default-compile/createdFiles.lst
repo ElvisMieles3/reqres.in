@@ -1,0 +1,7 @@
+co\certificacion\reqres\utils\CrearBody.class
+co\certificacion\reqres\tasks\consulta\ConsumirServicio.class
+co\certificacion\reqres\endpoints\ApiEndPoint.class
+co\certificacion\reqres\endpoints\ConsumirApi.class
+co\certificacion\reqres\questions\ValidarElEstado.class
+co\certificacion\reqres\tasks\RegistrarUsuario.class
+co\certificacion\reqres\models\AutenticacionModels.class
