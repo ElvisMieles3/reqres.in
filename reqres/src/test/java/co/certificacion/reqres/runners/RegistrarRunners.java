@@ -7,7 +7,6 @@ import org.junit.runner.RunWith;
 @RunWith(CucumberWithSerenity.class)
 @CucumberOptions(features = "src/test/resources/features/",
         glue = {"co.certificacion.reqres.stepdefinitions"},
-
-        snippets = SnippetType.CAMELCASE)
+        snippets = SnippetType.CAMELCASE , tags = "@consultaID")
 public class RegistrarRunners {
 }

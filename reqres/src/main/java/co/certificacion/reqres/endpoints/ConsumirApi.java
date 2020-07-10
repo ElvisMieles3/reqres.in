@@ -36,5 +36,15 @@ public class ConsumirApi {
                         .header("Content-Type", "application/json")));
     }
 
+    public static void tipoGetId(String endPoint, int id, Actor actor) {
+
+        actor.attemptsTo(Get.resource(endPoint)
+                .with(request -> request
+                        .header("Content-Type", "application/json")
+                        .queryParam("id", id)));
+    }
+
+
+
     }
 

@@ -15,11 +15,14 @@ Característica: creacion cliente desde el servicio
     Entonces el deberia ver que la respuesta es un codigo '201'
     Y el mensaje '415' en el campo 'id'
 
-
-
   Escenario: El Analista de Calidad verifica que el servicio permita elimimar el cliente
     Dado El analista consulta el servicio de consultar 'cliente'
     Cuando El analista realiza la consulta de 'eliminar' cliente con el siguiente Id '2'
     Entonces El Analista obtiene como codigo de respuesta '204'
+
+  @consultaID
+  Escenario: El Analista de Calidad verifica la respuesta del servicio consultar Cliente por ID
+    Cuando El analista realiza la consulta del servicio 'cliente_id' con el siguiente ID '2'
+    Entonces el deberia ver que la respuesta es un codigo '200'
 
 

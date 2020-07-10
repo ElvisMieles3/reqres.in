@@ -2,7 +2,7 @@
 <html>
 <head>
     <meta charset="UTF-8"/>
-    <title>El Analista de Calidad verifica que el servicio permita elimimar el cliente</title>
+    <title>El Analista de Calidad verifica la respuesta del servicio consultar Cliente por ID</title>
 <link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
 <link rel="apple-touch-icon" sizes="57x57" href="apple-icon-57x57.png">
 <link rel="apple-touch-icon" sizes="60x60" href="apple-icon-60x60.png">
@@ -80,7 +80,7 @@
             <a href="index.html" class="breadcrumbs">Home</a>
 
             > <a href="786a1eed85f193773523b480afa80017c928bd1c024a8e2ea88061d950871191.html">Creacion Cliente Desde El Servicio</a>
-        > El Analista de Calidad verifica que el servicio permita elimimar el cliente
+        > El Analista de Calidad verifica la respuesta del servicio consultar Cliente por ID
         </span>
         </div>
         <div class="rightbg"></div>
@@ -101,7 +101,7 @@
             <a href="576946480b52ad056d6f5bddf874399c83582ecf90963cc074a14c70580e7d9f.html"><i class="fa fa-comments-o"></i> Features</a>
         </li>
     </ul>
-    <span class="date-and-time"><a href="build-info.html"><i class="fa fa-info-circle"></i></a> Report generated 10-07-2020 11:11</span>
+    <span class="date-and-time"><a href="build-info.html"><i class="fa fa-info-circle"></i></a> Report generated 10-07-2020 11:57</span>
     <br style="clear:left"/>
 </div>
     <div class="clr"></div>
@@ -128,6 +128,13 @@ Para garantizar que los usuarios puedan  realizar el CRUD
 
                         </td>
                         <td valign="top">
+                                <p class="tag">
+                                    <span class="badge tag-badge" style="background:default;">
+                                    <i class="fa fa-tag"></i>&nbsp;<a class="tagLink" style="background:default;"
+                                                                      href="a02c02daf6367140947e6227fe1f8646fd95d1750bfb767a507f65cc961160a9.html">Consultaid
+                                    (tag)</a>
+                                </span>
+                                </p>
                         </td>
                     </tr>
                 </table>
@@ -139,7 +146,7 @@ Para garantizar que los usuarios puedan  realizar el CRUD
                             <span class="outcome-icon"><i class='fa fa-check-circle-o success-icon fa-2x' title='SUCCESS'></i></span>
                             <span class="test-case-title">
                                 <span class="success-color">
-                                    El Analista de Calidad verifica que el servicio permita elimimar el cliente
+                                    El Analista de Calidad verifica la respuesta del servicio consultar Cliente por ID
                                         <span class="related-issue-title"></span>
                                 </span>
                             </span>
@@ -245,7 +252,7 @@ Para garantizar que los usuarios puedan  realizar el CRUD
                             <a href="javaScript:void(0)" onClick="toggleDiv('stepSection0')"
                                style="display:block;">
                                 <span class="top-level-step">
-                                Dado El analista consulta el servicio de consultar 'cliente'
+                                Cuando El analista realiza la consulta del servicio 'cliente_id' con el siguiente ID '2'
                             </span>
                             </a>
                             <span class="evidence">
@@ -253,7 +260,7 @@ Para garantizar que los usuarios puedan  realizar el CRUD
                         </div>
                     </td>
                     <td width="100"><span class="top-level-step">SUCCESS</span></td>
-                    <td width="100"><span class="top-level-step">0.76s</span></td>
+                    <td width="100"><span class="top-level-step">5.85s</span></td>
                 </tr>
                 <tr>
                     <td colspan="5">
@@ -273,7 +280,7 @@ Para garantizar que los usuarios puedan  realizar el CRUD
                             <a href="javaScript:void(0)" onClick="toggleDiv('stepSection0-0')"
                                style="display:block;">
                                 <span class="nested-step">
-                                Elvis executes a GET on the resource https://reqres.in/api/users
+                                Elvis executes a GET on the resource users
                             </span>
                             </a>
                             <span class="evidence">
@@ -281,7 +288,7 @@ Para garantizar que los usuarios puedan  realizar el CRUD
                         </div>
                     </td>
                     <td width="100"><span class="nested-step">SUCCESS</span></td>
-                    <td width="100"><span class="nested-step">0.74s</span></td>
+                    <td width="100"><span class="nested-step">5.34s</span></td>
                 </tr>
                 <tr>
                     <td colspan="5">
@@ -296,7 +303,7 @@ Para garantizar que los usuarios puedan  realizar el CRUD
                     <td>
                         <div class="step-description">
                                 <span class="nested-group-step">
-                                GET https://reqres.in/api/https%3A%2F%2Freqres.in/api/users
+                                GET https://reqres.in/api/users?id=2
                             </span>
                             <span class="evidence">
                                     <span class="piece-of-evidence">
@@ -312,7 +319,7 @@ Para garantizar que los usuarios puedan  realizar el CRUD
                                 <div class="card">
                                     <div class="card-body">
                                         <h4>Response</h4>
-                                            <p>Status code: 404</p>
+                                            <p>Status code: 200</p>
                                             <p>Content Type: application/json</p>
                                             <h4>Request Headers</h4>
                                             <pre>Accept=*/*<br>Content-Type=application/json; charset=UTF-8</pre>
@@ -321,11 +328,11 @@ Para garantizar que los usuarios puedan  realizar el CRUD
                                             <h4>Request Cookies</h4>
                                             <pre></pre>
                                             <h4>Response Headers</h4>
-                                            <pre>Date: Fri, 10 Jul 2020 16:11:21 GMT<br>Content-Type: application/json; charset=utf-8<br>Content-Length: 2<br>Connection: keep-alive<br>Set-Cookie: __cfduid=de1ca50d912470f431dbd294558326aa21594397480; expires=Sun, 09-Aug-20 16:11:20 GMT; path=/; domain=.reqres.in; HttpOnly; SameSite=Lax; Secure<br>X-Powered-By: Express<br>Access-Control-Allow-Origin: *<br>Etag: W/&quot;2-vyGp6PvFo4RvsFtPoIWeCReyIC8&quot;<br>Via: 1.1 vegur<br>Cache-Control: max-age=14400<br>CF-Cache-Status: EXPIRED<br>cf-request-id: 03db17ef050000046131b82200000001<br>Expect-CT: max-age=604800, report-uri=&quot;https://report-uri.cloudflare.com/cdn-cgi/beacon/expect-ct&quot;<br>Vary: Accept-Encoding<br>Server: cloudflare<br>CF-RAY: 5b0b8f5e6e480461-MIA</pre>
+                                            <pre>Date: Fri, 10 Jul 2020 16:57:28 GMT<br>Content-Type: application/json; charset=utf-8<br>Transfer-Encoding: chunked<br>Connection: keep-alive<br>Set-Cookie: __cfduid=de6fc1d202f8c315dbdade392540d037e1594400248; expires=Sun, 09-Aug-20 16:57:28 GMT; path=/; domain=.reqres.in; HttpOnly; SameSite=Lax; Secure<br>X-Powered-By: Express<br>Access-Control-Allow-Origin: *<br>Etag: W/&quot;173-1Z8bn0V7UjH6FK7NCaza1ccWXQk&quot;<br>Via: 1.1 vegur<br>Cache-Control: max-age=14400<br>CF-Cache-Status: HIT<br>Age: 3983<br>cf-request-id: 03db422b110000116dbea94200000001<br>Expect-CT: max-age=604800, report-uri=&quot;https://report-uri.cloudflare.com/cdn-cgi/beacon/expect-ct&quot;<br>Vary: Accept-Encoding<br>Server: cloudflare<br>CF-RAY: 5b0bd2f1bdce116d-MIA<br>Content-Encoding: gzip</pre>
                                         <h4>Response Body</h4>
-                                            <pre>{<br>    <br>}</pre>
+                                            <pre>{<br>    &quot;data&quot;: {<br>        &quot;id&quot;: 2,<br>        &quot;email&quot;: &quot;janet.weaver@reqres.in&quot;,<br>        &quot;first_name&quot;: &quot;Janet&quot;,<br>        &quot;last_name&quot;: &quot;Weaver&quot;,<br>        &quot;avatar&quot;: &quot;https://s3.amazonaws.com/uifaces/faces/twitter/josephstein/128.jpg&quot;<br>    },<br>    &quot;ad&quot;: {<br>        &quot;company&quot;: &quot;StatusCode Weekly&quot;,<br>        &quot;url&quot;: &quot;http://statuscode.org/&quot;,<br>        &quot;text&quot;: &quot;A weekly newsletter focusing on software development, infrastructure, the server, performance, and the stack end of things.&quot;<br>    }<br>}</pre>
                                             <h4>Response Cookies</h4>
-                                            <pre>__cfduid=de1ca50d912470f431dbd294558326aa21594397480;Path=/;Domain=.reqres.in;Secure;HttpOnly;Expires=9/08/20 04:11 PM</pre>
+                                            <pre>__cfduid=de6fc1d202f8c315dbdade392540d037e1594400248;Path=/;Domain=.reqres.in;Secure;HttpOnly;Expires=9/08/20 04:57 PM</pre>
                                     </div>
                                 </div>
                             </div>
@@ -359,7 +366,7 @@ Para garantizar que los usuarios puedan  realizar el CRUD
                             <a href="javaScript:void(0)" onClick="toggleDiv('stepSection1')"
                                style="display:block;">
                                 <span class="top-level-step">
-                                Cuando El analista realiza la consulta de 'eliminar' cliente con el siguiente Id '2'
+                                Entonces el deberia ver que la respuesta es un codigo '200'
                             </span>
                             </a>
                             <span class="evidence">
@@ -367,7 +374,7 @@ Para garantizar que los usuarios puedan  realizar el CRUD
                         </div>
                     </td>
                     <td width="100"><span class="top-level-step">SUCCESS</span></td>
-                    <td width="100"><span class="top-level-step">0.55s</span></td>
+                    <td width="100"><span class="top-level-step">0.37s</span></td>
                 </tr>
                 <tr>
                     <td colspan="5">
@@ -376,120 +383,6 @@ Para garantizar que los usuarios puedan  realizar el CRUD
                 <tr class="test-SUCCESS">
                     <td width="50" class="step-icon">
                         <a name="1-0"/>
-                            <a href="javaScript:void(0)" onClick="toggleDiv('stepSection1-0')"
-                               style="display:block">
-                                <i class="fa fa-plus-square-o imgstepSection1-0 success-icon"
-                                   style="margin-left: 40px; float:left;  padding-right:5px"></i>
-                            </a>
-                    </td>
-                    <td>
-                        <div class="step-description">
-                            <a href="javaScript:void(0)" onClick="toggleDiv('stepSection1-0')"
-                               style="display:block;">
-                                <span class="nested-step">
-                                Elvis executes a DELETE on the resource https://reqres.in//clients/id/delete
-                            </span>
-                            </a>
-                            <span class="evidence">
-                            </span>
-                        </div>
-                    </td>
-                    <td width="100"><span class="nested-step">SUCCESS</span></td>
-                    <td width="100"><span class="nested-step">0.54s</span></td>
-                </tr>
-                <tr>
-                    <td colspan="5">
-                        <table id="stepSection1-0" style="display:none; width:100%">
-
-                <tr class="test-SUCCESS">
-                    <td width="50" class="step-icon">
-                        <a name="1-0-0"/>
-                            <span style="margin-left: 60px; margin-right: 5px;"
-                                  class="nested-group-icon"><i class='fa fa-check-circle-o success-icon ' title='SUCCESS'></i></span>
-                    </td>
-                    <td>
-                        <div class="step-description">
-                                <span class="nested-group-step">
-                                DELETE https://reqres.in/api/https%3A%2F%2Freqres.in%2F%2Fclients/id/delete
-                            </span>
-                            <span class="evidence">
-                                    <span class="piece-of-evidence">
-                        <span>
-                    <button type="button" class="btn btn-success btn-sm" data-toggle="collapse"
-                            data-target="#restModal-REST-6">
-                        REST Query
-                    </button>
-                </span>
-                        <!-- Modal -->
-                        <div class="rest-query-details">
-                            <div class="collapse multi-collapse" id="restModal-REST-6">
-                                <div class="card">
-                                    <div class="card-body">
-                                        <h4>Response</h4>
-                                            <p>Status code: 204</p>
-                                            <p>Content Type: application/json</p>
-                                            <h4>Request Headers</h4>
-                                            <pre>Accept=*/*<br>Content-Type=application/json; charset=UTF-8</pre>
-                                            <h4>Content Body</h4>
-                                            <pre></pre>
-                                            <h4>Request Cookies</h4>
-                                            <pre></pre>
-                                            <h4>Response Headers</h4>
-                                            <pre>Date: Fri, 10 Jul 2020 16:11:21 GMT<br>Content-Length: 0<br>Connection: keep-alive<br>Set-Cookie: __cfduid=d03ca1d6e42731b763413ac5c2a22a5e81594397481; expires=Sun, 09-Aug-20 16:11:21 GMT; path=/; domain=.reqres.in; HttpOnly; SameSite=Lax; Secure<br>X-Powered-By: Express<br>Access-Control-Allow-Origin: *<br>Etag: W/&quot;2-vyGp6PvFo4RvsFtPoIWeCReyIC8&quot;<br>Via: 1.1 vegur<br>CF-Cache-Status: DYNAMIC<br>cf-request-id: 03db17f1410000e96c1e33e200000001<br>Expect-CT: max-age=604800, report-uri=&quot;https://report-uri.cloudflare.com/cdn-cgi/beacon/expect-ct&quot;<br>Server: cloudflare<br>CF-RAY: 5b0b8f620e50e96c-MIA</pre>
-                                        <h4>Response Body</h4>
-                                            <pre></pre>
-                                            <h4>Response Cookies</h4>
-                                            <pre>__cfduid=d03ca1d6e42731b763413ac5c2a22a5e81594397481;Path=/;Domain=.reqres.in;Secure;HttpOnly;Expires=9/08/20 04:11 PM</pre>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                                    </span>
-                            </span>
-                        </div>
-                    </td>
-                    <td width="100"><span class="nested-group-step">SUCCESS</span></td>
-                    <td width="100"><span class="nested-group-step">0s</span></td>
-                </tr>
-
-                        </table>
-                    </td>
-                <tr>
-
-                        </table>
-                    </td>
-                <tr>
-                <tr class="test-SUCCESS">
-                    <td width="50" class="step-icon">
-                        <a name="2"/>
-                            <a href="javaScript:void(0)" onClick="toggleDiv('stepSection2')"
-                               style="display:block">
-                                <i class="fa fa-plus-square-o imgstepSection2 success-icon"
-                                   style="margin-left: 20px; float:left;  padding-right:5px"></i>
-                            </a>
-                    </td>
-                    <td>
-                        <div class="step-description">
-                            <a href="javaScript:void(0)" onClick="toggleDiv('stepSection2')"
-                               style="display:block;">
-                                <span class="top-level-step">
-                                Entonces El Analista obtiene como codigo de respuesta '204'
-                            </span>
-                            </a>
-                            <span class="evidence">
-                            </span>
-                        </div>
-                    </td>
-                    <td width="100"><span class="top-level-step">SUCCESS</span></td>
-                    <td width="100"><span class="top-level-step">0.01s</span></td>
-                </tr>
-                <tr>
-                    <td colspan="5">
-                        <table id="stepSection2" style="display:none; width:100%">
-
-                <tr class="test-SUCCESS">
-                    <td width="50" class="step-icon">
-                        <a name="2-0"/>
                             <span style="margin-left: 40px; margin-right: 5px;"
                                   class="nested-group-icon"><i class='fa fa-check-circle-o success-icon ' title='SUCCESS'></i></span>
                     </td>
@@ -503,7 +396,7 @@ Para garantizar que los usuarios puedan  realizar el CRUD
                         </div>
                     </td>
                     <td width="100"><span class="nested-group-step">SUCCESS</span></td>
-                    <td width="100"><span class="nested-group-step">0s</span></td>
+                    <td width="100"><span class="nested-group-step">0.09s</span></td>
                 </tr>
 
                         </table>
@@ -512,7 +405,7 @@ Para garantizar que los usuarios puedan  realizar el CRUD
                 <tr class="test-SUCCESS">
                         <td colspan="2"></td>
                     <td width="100"><span class="top-level-step"><em>SUCCESS</em></span></td>
-                    <td width="100"><span class="top-level-step"><em>1.34s</em></span></td>
+                    <td width="100"><span class="top-level-step"><em>8.32s</em></span></td>
                 </tr>
 
             </table>

@@ -89,9 +89,15 @@ public class RegistrarStepDefinitions {
         );
     }
 
+    @Cuando("El analista realiza la consulta del servicio '(.*)' con el siguiente ID '(.*)'")
+    public void elAnalistaRealizaLaConsultaDelServicioConElSiguienteID(String servicio, int id) {
+        ConsumirApi.tipoGetId(ApiEndPoint.obtenerEndPoint(servicio), id, analista);
+    }
+
 
     @After
     public void cerrarElEscenario() {
+
         OnStage.drawTheCurtain();
     }
 
