@@ -18,11 +18,19 @@ Característica: creacion cliente desde el servicio
   Escenario: El Analista de Calidad verifica que el servicio permita elimimar el cliente
     Dado El analista consulta el servicio de consultar 'cliente'
     Cuando El analista realiza la consulta de 'eliminar' cliente con el siguiente Id '2'
-    Entonces El Analista obtiene como codigo de respuesta '200'
+    Entonces El Analista obtiene como codigo de respuesta '204'
 
-  @consultaID
+
   Escenario: El Analista de Calidad verifica la respuesta del servicio consultar Cliente por ID
     Cuando El analista realiza la consulta del servicio 'cliente_id' con el siguiente ID '2'
     Entonces el deberia ver que la respuesta es un codigo '200'
+
+  Escenario: El Analista de Calidad verifica el servicio de actualizar Cliente
+    Dado el Analista envia la peticion de actualizacion con los datos:
+      | name     | job           |
+      | morpheus | zion resident |
+    Cuando El analista realiza la consulta del servicio  'actualizar' cliente con el ID '2'
+    Entonces el deberia ver que la respuesta es un codigo '200'
+    Y el mensaje 'morpheus' en el campo 'name'
 
 

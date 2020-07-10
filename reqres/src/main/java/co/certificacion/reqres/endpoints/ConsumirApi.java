@@ -4,9 +4,8 @@ import net.serenitybdd.screenplay.Actor;
 import net.serenitybdd.screenplay.rest.interactions.Delete;
 import net.serenitybdd.screenplay.rest.interactions.Get;
 import net.serenitybdd.screenplay.rest.interactions.Post;
+import net.serenitybdd.screenplay.rest.interactions.Put;
 
-
-import static net.serenitybdd.screenplay.actors.OnStage.theActorInTheSpotlight;
 
 public class ConsumirApi {
 
@@ -42,6 +41,16 @@ public class ConsumirApi {
                 .with(request -> request
                         .header("Content-Type", "application/json")
                         .queryParam("id", id)));
+    }
+
+    public static void tipoPUT( String endPoint,String body, int id, Actor actor) {
+
+        endPoint = endPoint.replace("id", id+"");
+        actor.attemptsTo(Put.to(endPoint)
+                .with(request -> request
+                        .header("Content-Type", "application/json")
+                        .body(body)
+                        .log().all()));
     }
 
 

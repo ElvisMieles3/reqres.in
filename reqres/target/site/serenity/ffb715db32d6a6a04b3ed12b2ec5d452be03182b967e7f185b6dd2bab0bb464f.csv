@@ -1,3 +1,0 @@
-"Story","Title","Result","Date","Stability","Duration (s)"
-"creacion cliente desde el servicio","El Analista de Calidad verifica la respuesta del servicio de registrar cliente","SUCCESS","2020-07-08T21:40:51.771-05:00[America/Bogota]","0.0","6.24"
-"creacion cliente desde el servicio","El Analista de Calidad verifica que el servicio permita elimimar el cliente","SUCCESS","2020-07-08T21:40:58.018-05:00[America/Bogota]","0.0","1.21"

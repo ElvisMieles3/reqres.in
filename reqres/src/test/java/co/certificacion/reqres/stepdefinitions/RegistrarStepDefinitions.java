@@ -46,7 +46,7 @@ public class RegistrarStepDefinitions {
 
         String bodyRegistrarCliente = CrearBody.conLaPlantilla(AutenticacionModels.CREAR_CLIENTE).yLosValores(datos);
         theActorInTheSpotlight().remember("bodyRegistrarCliente", bodyRegistrarCliente);
-        System.out.print("----------------" + bodyRegistrarCliente);
+
     }
 
     @Cuando("que el Analista desea consumir el servicio llamado '(.*)'")
@@ -94,6 +94,20 @@ public class RegistrarStepDefinitions {
         ConsumirApi.tipoGetId(ApiEndPoint.obtenerEndPoint(servicio), id, analista);
     }
 
+    @Dado("el Analista envia la peticion de actualizacion con los datos:")
+    public void elAnalistaEnviaLaPeticionDeActualizacionConLosDatos(List<Map<String, String>> datos) {
+        String bodyActualizarCliente = CrearBody.conLaPlantilla(AutenticacionModels.ACTUALIZAR_CLIENTE).
+                yLosValores(datos);
+        theActorInTheSpotlight().remember("bodyActualizarCliente", bodyActualizarCliente);
+
+
+    }
+
+    @Cuando("El analista realiza la consulta del servicio  '(.*)' cliente con el ID '(.*)'")
+    public void elAnalistaRealizaLaConsultaDelServicioClienteConElID(String servicio, int id) {
+        String bodyActualizarCliente = theActorInTheSpotlight().recall("bodyActualizarCliente");
+        ConsumirApi.tipoPUT(ApiEndPoint.obtenerEndPoint(servicio),bodyActualizarCliente, id, analista);
+    }
 
     @After
     public void cerrarElEscenario() {
