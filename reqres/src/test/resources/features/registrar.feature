@@ -13,6 +13,7 @@ Característica: creacion cliente desde el servicio
       | eve.holt@reqres.in | pistol   |
     Cuando que el Analista desea consumir el servicio llamado 'register'
     Entonces el deberia ver que la respuesta es un codigo '201'
+    Y el mensaje '415' en el campo 'id'
 
 
 

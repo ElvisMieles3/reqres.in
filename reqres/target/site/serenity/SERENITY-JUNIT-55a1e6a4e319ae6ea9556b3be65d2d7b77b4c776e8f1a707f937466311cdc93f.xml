@@ -1,1 +1,12 @@
-<?xml version="1.0" encoding="UTF-8"?><testsuite errors="0" failures="0" name="creacion cliente desde el servicio" skipped="0" tests="2" time="7.45" timestamp="2020-07-08 09:40:51"><testcase name="El Analista de Calidad verifica la respuesta del servicio de registrar cliente"/><testcase name="El Analista de Calidad verifica que el servicio permita elimimar el cliente"/></testsuite>
+<?xml version="1.0" encoding="UTF-8"?><testsuite errors="0" failures="1" name="creacion cliente desde el servicio" skipped="0" tests="2" time="8.47" timestamp="2020-07-10 10:40:18"><testcase name="El Analista de Calidad verifica la respuesta del servicio de registrar cliente"><failure message="1 expectation failed.&#10;JSON path id doesn't match.&#10;Expected: is &quot;415&quot;&#10;  Actual: 64&#10;" type="java.lang.AssertionError">1 expectation failed.
+JSON path id doesn't match.
+Expected: is "415"
+  Actual: 64
+</failure><system-err>1 expectation failed.
+JSON path id doesn't match.
+Expected: is "415"
+  Actual: 64
+&#13;
+co.certificacion.reqres.stepdefinitions.RegistrarStepDefinitions.elMensajeEnElCampo(RegistrarStepDefinitions.java:74)&#13;
+✽.el mensaje '415' en el campo 'id'(src/test/resources/features/registrar.feature:16)&#13;
+</system-err></testcase><testcase name="El Analista de Calidad verifica que el servicio permita elimimar el cliente"/></testsuite>

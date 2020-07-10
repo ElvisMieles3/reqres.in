@@ -16,6 +16,7 @@ import net.serenitybdd.screenplay.actors.OnlineCast;
 import net.serenitybdd.screenplay.rest.abilities.CallAnApi;
 
 import net.thucydides.core.util.EnvironmentVariables;
+import org.hamcrest.Matchers;
 import org.springframework.expression.spel.ast.Elvis;
 
 import java.util.List;
@@ -67,6 +68,11 @@ public class RegistrarStepDefinitions {
     public void elAnalistaConsultaElServicioDeConsultar(String servicio) {
         ConsumirApi.tipoGET(ApiEndPoint.obtenerEndPoint(servicio),analista);
 
+    }
+    @Entonces("el mensaje '(.*)' en el campo '(.*)'")
+    public void elMensajeEnElCampo(String mensaje, String campo) {
+        analista.should(
+                seeThatResponse("Estado correcto", lastResponse -> lastResponse.body(campo, Matchers.is(mensaje))));
     }
 
     @Cuando("El analista realiza la consulta de '(.*)' cliente con el siguiente Id '(.*)'")
