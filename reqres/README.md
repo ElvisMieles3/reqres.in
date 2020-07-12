@@ -31,4 +31,4 @@ La prueba se puede ejecutar por medio de la clase RegistrarRunners, la cual esta
 
 Para observar las evidencias de las pruebas debemos ejecutar el script y ingresar a la ruta target\site\serenity , allí buscamos el primer archivo HTML que encontramos en la carpeta.
 
-El archivo pom.XML encuentra las dependencias utilizadas en el proyecto.
+
